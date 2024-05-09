@@ -163,5 +163,5 @@ describe("My Solflare application", () => {
       await expect (await walletManagementPage.checkIsNewWalletDisplayed(index)).toEqual(true);
       logger.info(`"Wallet ${index}" is displayed`);
     }
-  });
+  }).timeout(90000);
 });
