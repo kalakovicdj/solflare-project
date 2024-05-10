@@ -79,7 +79,7 @@ export const config: Options.Testrunner = {
         args: isHeadless
           ? ["--headless", "--disable-gpu", "--window-size=1280,800"]
           : ["--disable-gpu", "--window-size=1280,800"],
-        binary: './node_modules/.bin/edgedriver'
+          binary: '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
       }
     }
   ].filter(cap => browserName === "all" || cap.browserName === browserName),
@@ -93,7 +93,6 @@ export const config: Options.Testrunner = {
   waitforTimeout: 10000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
-  services: ['visual'],
   reporters: [
     [
       'allure',
